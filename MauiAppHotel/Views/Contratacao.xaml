@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Contratacao"
+             Title="App Hotel"
+             BackgroundColor="White">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sobre" Clicked="OnSobreClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="8">
+
+            <Label Text="Hóspede" />
+            <Entry x:Name="txtNome" Placeholder="Nome completo" />
+
+            <Label Text="Quarto" />
+            <Picker x:Name="pckQuarto" Title="Selecione o quarto"
+                    ItemDisplayBinding="{Binding Descricao}"
+                    SelectedIndexChanged="OnAlterouValor" />
+
+            <HorizontalStackLayout Spacing="12">
+                <Button Text="−" WidthRequest="48" Clicked="OnAdultosMenos" />
+                <Button Text="+" WidthRequest="48" Clicked="OnAdultosMais" />
+                <Label x:Name="lblAdultos" Text="Adultos: 1" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="12">
+                <Button Text="−" WidthRequest="48" Clicked="OnCriancasMenos" />
+                <Button Text="+" WidthRequest="48" Clicked="OnCriancasMais" />
+                <Label x:Name="lblCriancas" Text="Crianças: 0" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <Label Text="Check-in" />
+            <DatePicker x:Name="dtpCheckIn" Format="dd/MM/yyyy"
+                        DateSelected="OnCheckInSelecionado" />
+
+            <Label Text="Check-out" />
+            <DatePicker x:Name="dtpCheckOut" Format="dd/MM/yyyy"
+                        DateSelected="OnAlterouData" />
+
+            <Label x:Name="lblResumo" FontAttributes="Bold" Margin="0,10" />
+
+            <Button Text="Contratar" Clicked="OnContratarClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

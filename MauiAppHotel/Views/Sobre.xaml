@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="8">
+
+            <Label Text="{Binding Nome}" FontSize="24" FontAttributes="Bold" />
+            <Label Text="{Binding Versao, StringFormat='Versão {0}'}" Margin="0,0,0,10" />
+
+            <Label Text="{Binding Desenvolvedor, StringFormat='Desenvolvedor: {0}'}" />
+            <Label Text="{Binding Ano, StringFormat='Ano: {0}'}" />
+            <Label Text="{Binding Curso, StringFormat='Curso: {0}'}" />
+            <Label Text="{Binding Disciplina, StringFormat='Disciplina: {0}'}" />
+            <Label Text="{Binding Instituicao, StringFormat='Instituição: {0}'}" />
+            <Label Text="{Binding Tecnologia, StringFormat='Tecnologias: {0}'}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

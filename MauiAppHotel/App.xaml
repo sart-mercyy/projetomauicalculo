@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Azul">#1B3A5C</Color>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#EDEDED" />
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#EDEDED" />
+            </Style>
+            <Style TargetType="DatePicker">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="#EDEDED" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Azul}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
